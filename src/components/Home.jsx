@@ -25,7 +25,7 @@ export default function Home({ completed, onOpenSection }) {
             onClick={() => onOpenSection(s.id)}
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.15 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.36, delay: 0.05 + i * 0.05, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -5, boxShadow: `0 18px 44px rgba(0,0,0,.5), 0 0 34px ${s.color}33` }}
             whileTap={{ scale: 0.985 }}
           >

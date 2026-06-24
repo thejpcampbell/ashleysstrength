@@ -10,7 +10,7 @@ const COLORS = [
   'rgba(134,224,192,', // teal
 ];
 
-export default function LightRibbons({ count = 8 }) {
+export default function LightRibbons({ count = 5 }) {
   const ribbons = useMemo(
     () =>
       Array.from({ length: count }, (_, i) => {
@@ -39,9 +39,9 @@ export default function LightRibbons({ count = 8 }) {
             top: '-28vh',
             left: `${r.left}%`,
             width: `${r.width}vw`,
-            height: '150vh',
+            height: '120vh',
             background: `linear-gradient(90deg, transparent, ${r.color}, transparent)`,
-            filter: 'blur(10px)',
+            filter: 'blur(8px)',
             transformOrigin: 'center',
             '--rot': `${r.rot}deg`,
             '--swayX': `${r.swayX}vw`,

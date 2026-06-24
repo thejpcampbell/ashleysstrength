@@ -21,7 +21,7 @@ export default function Aurora() {
             height: b.size,
             borderRadius: '50%',
             background: `radial-gradient(circle, ${b.color}, transparent 66%)`,
-            filter: 'blur(18px)',
+            filter: 'blur(14px)',
             animation: `${b.kf} ${b.dur}s ease-in-out ${b.delay}s infinite`,
             willChange: 'transform, opacity',
           }}

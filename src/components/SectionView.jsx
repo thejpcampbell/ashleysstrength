@@ -47,7 +47,7 @@ export default function SectionView({ section, completed, onOpen, onBack }) {
             onClick={() => onOpen(e.id)}
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.08 + i * 0.045, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.3, delay: 0.04 + Math.min(i, 8) * 0.03, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{
               y: -4,
               borderColor: done ? 'rgba(232,180,196,.6)' : 'rgba(201,168,76,.45)',

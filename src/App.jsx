@@ -15,13 +15,13 @@ export default function App() {
   const section = view.sectionId ? SECTIONS.find((s) => s.id === view.sectionId) : null;
   const entry = view.entryId ? ENTRIES.find((e) => e.id === view.entryId) : null;
 
-  // scroll to top whenever the screen changes
+  // scroll to top whenever the screen changes (instant — smooth scroll lags on older iPads)
   const go = (next) => {
     setView(next);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
-  const transition = { duration: 0.45, ease: [0.22, 1, 0.36, 1] };
+  const transition = { duration: 0.22, ease: [0.22, 1, 0.36, 1] };
 
   return (
     <>
