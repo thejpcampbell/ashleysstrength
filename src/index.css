@@ -103,6 +103,19 @@ body {
   font-size: 1.12rem;
   margin: 14px 0 26px;
 }
+/* tiles are real <button>s now (reliable tap on iOS home-screen apps);
+   reset native button chrome so they still look like cards */
+.section-card,
+.card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
 .section-card {
   position: relative;
   border: 1px solid var(--border);

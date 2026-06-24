@@ -40,7 +40,7 @@ export default function SectionView({ section, completed, onOpen, onBack }) {
       {inSec.map((e, i) => {
         const done = completed.includes(e.id);
         return (
-          <motion.div
+          <motion.button
             key={e.id}
             className={'card' + (done ? ' done' : '')}
             style={{ background: `linear-gradient(155deg, ${section.color}1c, ${section.color}06 60%, rgba(255,255,255,0.01))` }}
@@ -64,7 +64,7 @@ export default function SectionView({ section, completed, onOpen, onBack }) {
                 You were here
               </div>
             )}
-          </motion.div>
+          </motion.button>
         );
       })}
     </div>

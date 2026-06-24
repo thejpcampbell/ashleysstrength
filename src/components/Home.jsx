@@ -18,7 +18,7 @@ export default function Home({ completed, onOpenSection }) {
         const inSec = ENTRIES.filter((e) => e.section === s.id);
         const done = inSec.filter((e) => completed.includes(e.id)).length;
         return (
-          <motion.div
+          <motion.button
             key={s.id}
             className="section-card"
             style={{ '--sc': s.color, background: `linear-gradient(155deg, ${s.color}2b, ${s.color}0a 55%, rgba(255,255,255,0.012))` }}
@@ -43,7 +43,7 @@ export default function Home({ completed, onOpenSection }) {
               </span>
               {done > 0 && <span className="progress">· {done} visited</span>}
             </div>
-          </motion.div>
+          </motion.button>
         );
       })}
     </div>
